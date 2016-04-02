@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:fabTest1="clr-namespace:FABTest1;assembly=FABTest1"
+             x:Class="FABTest1.Page1">
+    <AbsoluteLayout VerticalOptions="FillAndExpand"
+                    HorizontalOptions="FillAndExpand">
+        <StackLayout AbsoluteLayout.LayoutFlags="All"
+                     AbsoluteLayout.LayoutBounds="0,0,1,1">
+            <Label Text="FAB Test 1"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center" />
+            <ListView x:Name="MainList" 
+                      ItemsSource="{Binding MyItems}"
+                      VerticalOptions="FillAndExpand"/>
+        </StackLayout>
+        <fabTest1:FloatingActionButtonView x:Name="Fab" 
+                                           AbsoluteLayout.LayoutFlags="PositionProportional" 
+                                           AbsoluteLayout.LayoutBounds="1,1,AutoSize,AutoSize"
+                                           ImageName="ic_add.png"
+                                           ColorNormal="#ff3498db"
+                                           ColorPressed="Black"
+                                           ColorRipple="#ff3498db"
+                                           Command="{Binding FabExecuteCommand}"
+                                           ParentList="{Binding Source={x:Reference MainList}, Path=.}"/>
+        <!-- 
+        // Experimental - Hiding and showing the FAB correctly is dependent on the objects in the list being unique
+        ParentList="{Binding Source={x:Reference MainList}, Path=.}" 
+        -->
+    </AbsoluteLayout>
+</ContentPage>
