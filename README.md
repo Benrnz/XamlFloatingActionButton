@@ -12,10 +12,10 @@ Best place to start is to clone this repo and take a look at how its used.
 At this stage the control is not encapsulated in any way other than copying the necessary files from this example into your App.
 Steps
 -----
-1) Include the Nuget Package Refractored.FloatingActionButton. This example uses v1.3.
-2) Copy the following code classes into your PCL: FloatingActionButtonSize.cs, FloatingActionButtonView.cs
-3) Copy the following files into your Droid project: FloatingActionButtonViewRenderer.cs. Also copy the image ic_add.png into Resources/drawable_*
-4) Use the FAB in Xaml as demonstrated below:
+1. Include the Nuget Package Refractored.FloatingActionButton. This example uses v1.3.
+2. Copy the following code classes into your PCL: `FloatingActionButtonSize.cs`, `FloatingActionButtonView.cs`
+3. Copy the following files into your Droid project: `FloatingActionButtonViewRenderer.cs`. Also copy the image `ic_add.png` into `/Resources/drawable_*`
+4. Use the FAB in Xaml as demonstrated below:
 `
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
