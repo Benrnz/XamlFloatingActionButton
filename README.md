@@ -16,7 +16,8 @@ Steps
 2. Copy the following code classes into your PCL: `FloatingActionButtonSize.cs`, `FloatingActionButtonView.cs`
 3. Copy the following files into your Droid project: `FloatingActionButtonViewRenderer.cs`. Also copy the image `ic_add.png` into `/Resources/drawable_*`
 4. Use the FAB in Xaml as demonstrated below:
-`
+
+```
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -45,8 +46,8 @@ Steps
        
     </AbsoluteLayout>
 </ContentPage>
-`
+```
 
 ## Far from perfect
 There's more than a few rough edges here.  If you'd like to help improve it, be my guest.
-I'm also going to explore the new-ish https://components.xamarin.com/view/xamandroidsupportdesign. This may or may not make this better. 
+I'm also going to explore the new-ish [Android Support Design](https://components.xamarin.com/view/xamandroidsupportdesign). This may or may not make this better. 
