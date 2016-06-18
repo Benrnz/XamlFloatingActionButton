@@ -110,12 +110,7 @@ namespace FABTest1.Droid
                     if (index < appearingListItemIndex && index >= 0)
                     {
                         appearingListItemIndex = index;
-                        Device.BeginInvokeOnMainThread(async () =>
-                        {
-                            fab.Hide();
-                            //await Task.Delay(2000);
-                            //fab.Show();
-                        });
+                        Device.BeginInvokeOnMainThread(() => fab.Hide());
                     }
                     else
                     {
@@ -136,7 +131,7 @@ namespace FABTest1.Droid
                 if (items != null)
                 {
                     var index = items.IndexOf(e.Item);
-                    if (index < appearingListItemIndex)
+                    if (index < appearingListItemIndex || index == 0)
                     {
                         appearingListItemIndex = index;
                         Device.BeginInvokeOnMainThread(() => fab.Show());
