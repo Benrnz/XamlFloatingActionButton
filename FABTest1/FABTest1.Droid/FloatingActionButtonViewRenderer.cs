@@ -107,7 +107,7 @@ namespace FABTest1.Droid
                 if (items != null)
                 {
                     var index = items.IndexOf(e.Item);
-                    if (index < appearingListItemIndex)
+                    if (index < appearingListItemIndex && index >= 0)
                     {
                         appearingListItemIndex = index;
                         Device.BeginInvokeOnMainThread(async () =>
